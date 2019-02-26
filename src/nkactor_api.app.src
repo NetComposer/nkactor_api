@@ -1,0 +1,12 @@
+{application, nkactor_api, [
+    {description, "Actor API Framework"},
+    {vsn, "develop"},
+    {modules, []},
+    {registered, []},
+    {mod, {nkactor_api_app, []}},
+    {applications, [
+        nkserver
+    ]},
+    {env, [
+    ]}
+]}.
