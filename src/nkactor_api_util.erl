@@ -83,7 +83,7 @@ get_api_paths(SrvId) ->
 get_api_resources(SrvId, Modules) ->
     lists:map(
         fun(Module) ->
-            {ok, Config} = nkactor_util:get_actor_config(SrvId, Module),
+            Config = nkactor_actor:get_config(SrvId, Module),
             #{
                 resource := Resource,
                 singular := Singular,

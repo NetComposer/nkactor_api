@@ -62,8 +62,8 @@ http_request(SrvId, Method, Path, Req) ->
 
 
 %% @doc
--spec api_request(nkserver:id(), nkactor:request()) ->
-    nkactor:response().
+-spec api_request(nkserver:id(), nkactor_request:request()) ->
+    nkactor_request:response().
 
 api_request(SrvId, #{group:=Group}=ApiReq) ->
     ?CALL_SRV(SrvId, api_request, [SrvId, Group, ApiReq]).
